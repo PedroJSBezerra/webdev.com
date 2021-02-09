@@ -11,8 +11,18 @@
 *::after {
     box-sizing: border-box;
 }
+/*ADD Fonts ==============================*/
+@font-face {
+    font-family: popLight;
+    src: url(./fonts/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: popRegular;
+    src: url(/fonts/Poppins-Regular.ttf);
+}
+
 body {
-    font-family: sans-serif;
+    font-family: popLight;
     margin: 0;
     padding: 0;
     background: rgb(222, 254, 255);
@@ -30,7 +40,7 @@ body {
         padding: 2rem;
         text-align: center;
         margin: 0;
-        background: var(--blue5);
+        background: var(--blue1hover);
         color: white;
         font-size: 2rem;
     }
@@ -109,7 +119,7 @@ body {
     a img {
         position: relative;
         right: 20px;
-        bottom: 6px;
+        bottom: 2px;
         float: right;
         width: 2rem; 
     }
