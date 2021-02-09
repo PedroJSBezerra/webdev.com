@@ -1,15 +1,10 @@
 :root{
-    --lightgreen: #18DB5C;
-    --darkgreen: #098F37;
-    --lightpurple: #7203DB;
-    --darkpurple: #51108F;
-    --orange: #DB8E18;
-
-    --level1: #1B1F17;
-    --level2: #283819;
-    --level3: #4D6B2F;
-    --level4: #5D6B4F;
-    --level5: #A0B888;
+    --blue1: #004242;
+    --blue1hover: #005555;
+    --blue2: #008080;
+    --blue3: #00C2C2;
+    --blue4: #00DBDB;
+    --blue5: #00FFFF;
 }
 *,
 ::before,
@@ -20,42 +15,47 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-}
-.app {
-    background: var(--level5);
+    background: rgb(222, 254, 255);
 }
 @media screen and (max-width: 650px){
-    nav {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        background: var(--level1);
+    .app {
+        background: white;
     }
-    nav h1 {
+    nav {
+        background: var(--blue1);
+        display: flex;
+        flex-direction: column;
+    }
+    .logo {
         padding: 2rem;
         text-align: center;
         margin: 0;
-        background: var(--level2);
-        color: var(--orange);
+        background: var(--blue5);
+        color: white;
         font-size: 2rem;
     }
     /* NAV Button ========================================= */
     .navbutton {
         position: relative;
-        left: 1rem;
+        cursor: pointer;
+        left: 0.5rem;
         width: min(2.5rem);
         height: 2.5rem;
-        background: var(--lightgreen);
+        margin: 0.2rem;
+
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
+    }
+    .navbutton:hover {
+        box-shadow: 0 0 2px var(--blue5);
         border-radius: 0.1rem;
     }
     .navbutton span {
-        background: var(--darkpurple);
+        background: var(--blue5);
         width: 90%;
-        height: 13%;
+        height: 4px;
         border-radius: 5px;
     }
     /* NAV Menu ========================================= */
@@ -65,7 +65,7 @@ body {
         width: 100vw;
         height: 100vh;
 
-        position: fixed;
+        position: absolute;
         top: 0;
         transition: 0.3s eas;
         transform: translateX(-100%);
@@ -75,14 +75,14 @@ body {
         padding: 0;
         width: 70%;
         height: 100%;
-        background: var(--level1);
+        background: var(--blue1);
 
         display: flex;
         align-items: center;
         flex-direction: column;
     }
     .menu ul::after {
-        content: "Hey";
+        content: "";
         position: absolute;
         right: 0;
         width: 30%;
@@ -98,12 +98,19 @@ body {
     .menu ul li a {
         text-decoration: none;
         font-weight: bold;
-        font-size: 1.5rem;
-        color: var(--orange);
+        font-size: 1.2rem;
+        color: var(--blue5);
         display: block;
-        padding: 2rem;
+        padding: 1.5rem 0.5rem;
     }
     .menu ul li a:hover {
-        background: #333;
+        background: var(--blue1hover);
+    }
+    a img {
+        position: relative;
+        right: 20px;
+        bottom: 6px;
+        float: right;
+        width: 2rem; 
     }
 }
