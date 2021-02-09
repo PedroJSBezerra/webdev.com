@@ -7,8 +7,8 @@
     --blue5: #00FFFF;
 }
 *,
-::before,
-::after {
+*::before,
+*::after {
     box-sizing: border-box;
 }
 body {
